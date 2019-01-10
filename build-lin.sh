@@ -26,7 +26,7 @@ fi
 
 ./build/gyp_pdfium
 
-make -j `nproc` BUILDTYPE=Release \
+make -j4 BUILDTYPE=Release \
   pdfium \
   fdrm \
   fpdfdoc \
@@ -40,7 +40,7 @@ make -j `nproc` BUILDTYPE=Release \
   formfiller
 
 # third_party targets
-make -j `nproc` BUILDTYPE=Release \
+make -j4 BUILDTYPE=Release \
   bigint \
   freetype \
   fx_agg \
