@@ -68,9 +68,9 @@ fi
 
 if [ "$1" = "copy" -o "$COPY" = "true" ]; then
   # Copy libraries into $PREFIX
-  sudo mkdir -p $PREFIX/lib/pdfium
-  sudo cp out/Release/obj.target/lib*.a $PREFIX/lib/pdfium/
-  sudo cp out/Release/obj.target/third_party/lib*.a $PREFIX/lib/pdfium/
+  mkdir -p $PREFIX/lib/pdfium
+  cp out/Release/obj.target/lib*.a $PREFIX/lib/pdfium/
+  cp out/Release/obj.target/third_party/lib*.a $PREFIX/lib/pdfium/
   
   # Copy all headers
   mkdir -p $PREFIX/include/pdfium/fpdfsdk/include
