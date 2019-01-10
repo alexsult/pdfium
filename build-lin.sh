@@ -73,14 +73,14 @@ if [ "$1" = "copy" -o "$COPY" = "true" ]; then
   sudo cp out/Release/obj.target/third_party/lib*.a $PREFIX/lib/pdfium/
   
   # Copy all headers
-  sudo mkdir -p $PREFIX/include/pdfium/fpdfsdk/include
-  sudo mkdir -p $PREFIX/include/pdfium/core/include
-  sudo mkdir -p $PREFIX/include/pdfium/third_party/base/numerics
-  sudo cp -r public/*.h $PREFIX/include/pdfium/
-  sudo cp -r fpdfsdk/include/* $PREFIX/include/pdfium/fpdfsdk/include/
-  sudo cp -r core/include/* $PREFIX/include/pdfium/core/include
-  sudo cp -r third_party/base/numerics/* $PREFIX/include/pdfium/third_party/base/numerics
-  sudo cp -r third_party/base/* $PREFIX/include/pdfium/third_party/base/
+  mkdir -p $PREFIX/include/pdfium/fpdfsdk/include
+  mkdir -p $PREFIX/include/pdfium/core/include
+  mkdir -p $PREFIX/include/pdfium/third_party/base/numerics
+  cp -r public/*.h $PREFIX/include/pdfium/
+  cp -r fpdfsdk/include/* $PREFIX/include/pdfium/fpdfsdk/include/
+  cp -r core/include/* $PREFIX/include/pdfium/core/include
+  cp -r third_party/base/numerics/* $PREFIX/include/pdfium/third_party/base/numerics
+  cp -r third_party/base/* $PREFIX/include/pdfium/third_party/base/
 
   echo "./configure --with-pdfium=$PREFIX"
 fi
