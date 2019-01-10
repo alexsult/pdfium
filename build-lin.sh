@@ -67,7 +67,7 @@ if [ "$1" = "normal" ]; then
 fi
 
 if [ "$1" = "copy" -o "$COPY" = "true" ]; then
-  # Copy libraries into $PREFIX
+  # Copy libraries into  $PREFIX
   mkdir -p $PREFIX/lib/pdfium
   cp out/Release/obj.target/lib*.a $PREFIX/lib/pdfium/
   cp out/Release/obj.target/third_party/lib*.a $PREFIX/lib/pdfium/
